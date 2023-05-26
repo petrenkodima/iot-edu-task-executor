@@ -1,0 +1,24 @@
+spring:
+  # todo add env variables and readme
+  datasource:
+    url: jdbc:postgresql://localhost:5433/iot-edu-executor
+    username: iot-edu
+    password: iot-edu
+  flyway:
+    enabled: true
+    validate-on-migrate: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    properties:
+      hibernate:
+        show_sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+arduino-fqbn: "arduino:avr:uno"
